@@ -1,6 +1,19 @@
-# AREA: Anonymous Code Package
+# AREA
 
-This directory contains the runtime implementation of AREA, including adaptive evidence selection, dataset adapters, evaluation utilities, and configurations for the eleven benchmarks reported in the paper.
+Code for **Layers, Sinks, and Scaling: Adaptive Evidence Selection for Multimodal Large Language Models**.
+
+**Authors:** Zhenbin Wang, Lei Zhang, Lituan Wang, Wei Huang, Yan Wang, Zhenwei Zhang<br>
+**Affiliation:** Sichuan University<br>
+**Corresponding author:** Lei Zhang<br>
+**Contact:** [wangzhenbin@stu.scu.edu.cn](mailto:wangzhenbin@stu.scu.edu.cn)
+
+AREA implements adaptive evidence selection for frozen multimodal large language models (MLLMs). This repository includes the inference implementation, dataset adapters, evaluation utilities, and benchmark configurations.
+
+## Framework
+
+[![AREA framework](docs/images/framework.png)](docs/images/framework.pdf)
+
+A single probe pass drives layer-resolved evidence readout, adaptive scaling, and modality-specific gating. Causal text-evidence refresh updates textual evidence during generation. Click the figure to view the original PDF from the paper.
 
 ## Contents
 
@@ -9,9 +22,16 @@ This directory contains the runtime implementation of AREA, including adaptive e
 - Dataset adapters and evaluation code for E-VQA, InfoSeek, ViQuAE, RealWorldQA, V*, TextVQA, ChartQA, OCRBench, POPE, and AMBER-D.
 - Parameterized benchmark configurations and a unified launch script.
 
-This package excludes datasets, model weights, cached outputs, baseline implementations, paper sources, and figure-generation files.
+Datasets and model checkpoints must be provided separately. Configure their locations as described below.
 
 ## Environment Setup
+
+Clone the repository and enter its root directory:
+
+```bash
+git clone https://github.com/wongzbb/AREA.git
+cd AREA
+```
 
 Install the runtime dependencies and the English spaCy model:
 
@@ -49,7 +69,7 @@ export AMBER_ANNOTATION=/path/to/annotations.json
 
 ## Retrieval
 
-Vision-only benchmarks do not require a retriever, and the package includes the ViQuAE retrieval adapter. For image-index retrieval on E-VQA and InfoSeek, set `AREA_RETRIEVER_DIR` to a directory containing a compatible `retriever.py`; when it is unset, the implementation uses its configured knowledge-base fallback.
+Vision-only benchmarks do not require a retriever, and the repository includes the ViQuAE retrieval adapter. For image-index retrieval on E-VQA and InfoSeek, set `AREA_RETRIEVER_DIR` to a directory containing a compatible `retriever.py`; when it is unset, the implementation uses its configured knowledge-base fallback.
 
 ## Reproducibility
 
