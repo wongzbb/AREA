@@ -2,11 +2,6 @@
 
 Code for **Layers, Sinks, and Scaling: Adaptive Evidence Selection for Multimodal Large Language Models**.
 
-**Authors:** Zhenbin Wang, Lei Zhang, Lituan Wang, Wei Huang, Yan Wang, Zhenwei Zhang<br>
-**Affiliation:** Sichuan University<br>
-**Corresponding author:** Lei Zhang<br>
-**Contact:** [wangzhenbin@stu.scu.edu.cn](mailto:wangzhenbin@stu.scu.edu.cn)
-
 AREA implements adaptive evidence selection for frozen multimodal large language models (MLLMs). This repository includes the inference implementation, dataset adapters, evaluation utilities, and benchmark configurations.
 
 ## Framework
