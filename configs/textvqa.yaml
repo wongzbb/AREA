@@ -1,0 +1,10 @@
+# AREA config for TextVQA (vision-only benchmark)
+
+dataset_name: "textvqa"
+experiment_type: "no_retrieval"
+
+# Parquet files (glob pattern)
+query_path: "$AREA_DATA_ROOT/datasets/_hf_raw/lmms-lab__textvqa/data/validation-*.parquet"
+
+max_new_tokens: 32
+K_max: 0

@@ -1,0 +1,14 @@
+# AREA config for RealWorldQA (vision-only benchmark)
+# No retrieval; DG-LT text gate is always-off; ETML is text-only so also off.
+
+dataset_name: "real_world_qa"
+experiment_type: "no_retrieval"
+
+# Parquet files (glob pattern)
+query_path: "$AREA_DATA_ROOT/datasets/_hf_raw/lmms-lab__RealWorldQA/data/test-*.parquet"
+
+max_new_tokens: 16
+
+# For vision-only benchmarks EAEG/DG-LT text improvements are inert (no context),
+# but visual gate (DG-LT vis) and ETML can still help with localization.
+K_max: 0    # disable ETML (no text context to re-inject)

@@ -1,0 +1,10 @@
+# AREA config for V*Bench (visual spatial reasoning, vision-only)
+
+dataset_name: "vstar"
+experiment_type: "no_retrieval"
+
+query_path: "$AREA_DATA_ROOT/datasets/vstar_bench_raw/test_questions.jsonl"
+image_dir:  "$AREA_DATA_ROOT/datasets/vstar_bench_raw"
+
+max_new_tokens: 8
+K_max: 0

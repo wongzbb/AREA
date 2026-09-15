@@ -1,0 +1,32 @@
+# AREA default hyperparameters
+# All values here can be overridden by per-dataset configs or CLI args.
+
+model_name: "Qwen/Qwen2.5-VL-7B-Instruct"
+model_max_length: 16384
+min_pixels: 3136
+max_pixels: 301056
+max_new_tokens: 128
+
+seed: 42
+
+# Retrieval
+top_k: 3
+experiment_type: "with_retrieval"
+max_context_sections: 8
+
+# EAEG (HOW MUCH)
+k_max: 3          # max sentences to highlight; = n (retrieval count), prevents "all-highlight" noise
+beta_min: 1.5     # adaptive visual scale bounds
+beta_max: 2.5
+
+# DG-LT (WHETHER)
+warmup: 0         # OnlineMedian starts at 0.0 and delta>=0 always, so first sample is naturally ON
+
+# ETML (WHEN)
+kappa: 1.0        # peak = mean + 1σ (standard "clearly above history" threshold)
+K_max: 4          # max re-injections; aligns with AEGPO Top-K=4 bound
+
+# numerical safety
+eps: 1.0e-8
+
+

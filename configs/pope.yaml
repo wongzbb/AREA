@@ -1,0 +1,10 @@
+# AREA config for POPE (hallucination benchmark, vision-only)
+
+dataset_name: "pope"
+experiment_type: "no_retrieval"
+
+# Arrow/Parquet directory
+query_path: "$AREA_DATA_ROOT/datasets/_hf_raw/lmms-lab__POPE/data/test-*.parquet"
+
+max_new_tokens: 16
+K_max: 0

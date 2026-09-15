@@ -1,0 +1,22 @@
+# AREA config for InfoSeek
+# KB-VQA: uses FAISS image retrieval + Wiki-100K passages.
+
+dataset_name: "infoseek"
+experiment_type: "with_retrieval"
+
+# Query CSV
+query_path: "$AREA_DATA_ROOT/datasets/infoseek/infoseek_test_filtered.csv"
+
+# Local directory containing OVEN query images.
+image_dir: "$AREA_DATA_ROOT/datasets/oven_eval/images"
+
+# Wikipedia knowledge base (JSON, keyed by Wikipedia URL)
+wiki_KB: "$AREA_DATA_ROOT/datasets/infoseek/infoseek_100k_wiki/wiki_100_dict_v4.json"
+
+# FAISS image index
+img_index_path: "$AREA_DATA_ROOT/datasets/infoseek/infoseek_100k_faiss_index/kb_index.faiss"
+img_index_json_path: "$AREA_DATA_ROOT/datasets/infoseek/infoseek_100k_faiss_index/kb_index_ids.json"
+
+# Retrieval
+top_k: 3
+max_new_tokens: 64

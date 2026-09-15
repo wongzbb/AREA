@@ -1,0 +1,25 @@
+# AREA config for Encyclopedic-VQA (E-VQA)
+# KB-VQA: uses FAISS image retrieval + Wikipedia KB passages.
+
+dataset_name: "evqa"
+experiment_type: "with_retrieval"
+
+# Query CSV — contains question, answer, dataset_image_ids
+query_path: "$AREA_DATA_ROOT/datasets/encyclopedic_vqa/test.csv"
+
+# Optional local query-image directory. Missing E-VQA images are fetched on demand.
+image_dir: "$AREA_DATA_ROOT/datasets/encyclopedic_vqa/images"
+
+# Wikipedia knowledge base (JSON, keyed by Wikipedia URL)
+wiki_KB: "$AREA_DATA_ROOT/datasets/encyclopedic_vqa/encyclopedic_kb_wiki/encyclopedic_kb_wiki.json"
+
+# FAISS image index (EVA-CLIP embeddings of Wikipedia images)
+img_index_path: "$AREA_DATA_ROOT/datasets/encyclopedic_vqa/evqa_2M_faiss_index/root/FAISS_INDEX/EVA-CLIP_2/evqa_index_full/kb_index.faiss"
+img_index_json_path: "$AREA_DATA_ROOT/datasets/encyclopedic_vqa/evqa_2M_faiss_index/root/FAISS_INDEX/EVA-CLIP_2/evqa_index_full/kb_index_ids.pkl"
+
+# Retrieval
+top_k: 3
+max_new_tokens: 64
+
+# AREA: use all three improvements (defaults apply)
+# Override individual hyperparameters here if needed.

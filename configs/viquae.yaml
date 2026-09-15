@@ -1,0 +1,18 @@
+# AREA config for ViQuAE
+# KB-VQA: retrieves from gzipped Wikipedia JSONL files by entity title.
+
+dataset_name: "viquae"
+experiment_type: "with_retrieval"
+
+# Query JSONL
+query_path: "$AREA_DATA_ROOT/datasets/viquae_dataset/test.jsonl"
+
+# Query images (relative paths in JSONL are resolved against image_dir)
+image_dir: "$AREA_DATA_ROOT/datasets/viquae_images/images"
+
+# Wikipedia KB — directory with humans_with_faces.jsonl.gz etc.
+wiki_KB: "$AREA_DATA_ROOT/datasets/viquae_wikipedia"
+
+# Retrieval
+top_k: 3
+max_new_tokens: 64

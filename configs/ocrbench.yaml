@@ -1,0 +1,10 @@
+# AREA config for OCRBench (vision-only benchmark)
+
+dataset_name: "ocrbench"
+experiment_type: "no_retrieval"
+
+# Arrow dataset directory
+query_path: "$AREA_DATA_ROOT/datasets/ocrbench_test"
+
+max_new_tokens: 64
+K_max: 0

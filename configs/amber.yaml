@@ -1,0 +1,11 @@
+# AREA config for AMBER-D hallucination benchmark (discriminative split)
+# Paper reports discriminative accuracy (yes/no) on query_discriminative.json
+
+dataset_name: "amber"
+experiment_type: "no_retrieval"
+
+query_path: "$AREA_DATA_ROOT/datasets/AMBER/data/query/query_discriminative.json"
+image_dir:  "$AREA_DATA_ROOT/datasets/AMBER/image"
+
+max_new_tokens: 128
+K_max: 0
