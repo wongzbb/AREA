@@ -1,16 +1,15 @@
-# AREA
+<div id="top" align="center">
 
-Code for **Layers, Sinks, and Scaling: Adaptive Evidence Selection for Multimodal Large Language Models**.
+# Layers, Sinks, and Scaling: Adaptive Evidence Selection for Multimodal Large Language Models
+  
+  [![arXiv](https://img.shields.io/badge/arXiv-2406.15910-b31b1b.svg)](http://arxiv.org/abs/2609.16795)
 
-AREA implements adaptive evidence selection for frozen multimodal large language models (MLLMs). This repository includes the inference implementation, dataset adapters, evaluation utilities, and benchmark configurations.
+</div>
 
-## Framework
 
 [![AREA framework](docs/images/framework.png)](docs/images/framework.pdf)
 
 A single probe pass drives layer-resolved evidence readout, adaptive scaling, and modality-specific gating. Causal text-evidence refresh updates textual evidence during generation. Click the figure to view the original PDF from the paper.
-
-## Contents
 
 - AREA inference for frozen multimodal large language model (MLLM) checkpoints.
 - Layer-Resolved Evidence Readout, Entropy-Calibrated Evidence Scaling, Modality-Specific Intervention Gating, and Causal Text-Evidence Refresh.
